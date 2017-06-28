@@ -1,0 +1,16 @@
+GET_ALL:
+curl http://127.0.0.1:8080/heroes
+
+GET_ONE:
+curl http://127.0.0.1:8080/heroes/1
+
+ADD:
+curl -d "{\"id\":100,\"name\":\"Superman22222\"}" -X POST -H "Accept: application/json" -H "Content-Type: application/json" http://127.0.0.1:8080/heroes
+curl --data @newHero.json -X POST -H "Accept: application/json" -H "Content-Type: application/json" http://127.0.0.1:8080/heroes
+
+DELETE:
+curl http://127.0.0.1:8080/heroes/1 -X DELETE
+
+UPDATE:
+curl --data @updateHero.json -X PUT -H "Accept: application/json" -H "Content-Type: application/json" http://127.0.0.1:8080/heroes
+
